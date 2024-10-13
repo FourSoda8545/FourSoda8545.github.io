@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -5,15 +7,108 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Encabezado */
+
 header {
     background-color: #333;
+    font-family: Verdana, sans-serif;
     color: white;
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+header h1 {
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Efecto hover para los enlaces del menú */
+}
+
+/* Secciones */
+
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    border-radius: 20px 80px; 
 }
+section2 {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    border-radius: 80px 20px; 
+}
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Enlaces */
+
 a {
     color: #333;
     text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #001aff;
+    text-decoration: underline overline; 
+}
+
+/* Separadores */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 15q;
+}
+
+/* Estilos para dispositivos pequeños */
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        width: 95%;
+    }
+}
+
+/* Boton(es) */
+
+butt1 {
+    background-color: #001aff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px 6px 9px 12px;
+    cursor: pointer;
 }

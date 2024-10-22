@@ -94,6 +94,32 @@ hr {
 
 /* Estilos para pantallas */
 
+.column {
+    width: 100%;
+}
+/* ESTILO PARA PANTALLA DE CELULAR */
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+        }
+        .section1 {
+            padding: 20px 10px;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 2px 4px rgba(0, 0,0, 0.05);
+            border-radius: 20px 40px 20px 40px;
+            }
+        .section2 {
+            padding: 20px 10px;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 2px 4px rgba(0, 0,00.05);
+            border-radius: 20px 40px 20px 40px;
+            }
+
+
 @media screen and (max-width: 600px) {
     nav ul li {
         display: block;

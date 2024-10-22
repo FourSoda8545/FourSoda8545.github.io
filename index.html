@@ -4,51 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTAFOLIO</title>
+    <title>PORTFOLIO</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="whatsappButton.css">
+
+    <!--CONTROL DE WHATSAPP (API,ETC)-->
+<!-- Font Awesome para el ícono de WhatsApp -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+<!-- SweetAlert2 para notificaciones -->
+
+<!--boton de whatsapp flotante.-->
+
+
+
 </head>
 
-<header>
-    <h1>Bienvenidos a mi Portafolio</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#proyects">Proyectos</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- CATEGORIAS -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#proyects">Proyectos</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- SECCIONES DE LA PAGINA-->
 
     <section class="section1" id="home">
-    <!--idea de presentacion de servicios en movimiento -->
+        <!--idea de presentacion de servicios en movimiento -->
         <div class="presentacion">
-            <h2>¡Bienvenidos!</h2>
-            <p>¡Bienvenidos a mi portafolio! Aquí encontrarás información sobre mis servicios y proyectos que he realizado.</p>
+            <p>¡Bienvenidos a mi portafolio! Aquí podran explorar mis servicios y proyectos realizados.</p>
         </div>
     </section>
     
-    <section class="section2" id="about">
-        <h2>Sobre mi</h2>
-        <p>Hola, soy Aldo Rojas, desarrollador y técnico en mantenimiento de computadoras y sistemas computacionales (futuro fullstack).</p>
-        <p>Me apasiona la tecnología y la programación, y estoy siempre busca de expandir mi conocimiento, así como compartirlo.</p>
+    <section class="section" id="about">
+        <h2>SOBRE MI</h2>
+        <p>Hola, soy Aldo Rojas, desarrollador y técnico en mantenimiento de computadoras y sistemas computacionales.</p>
+        <p>Me apasiona la tecnología, la programación y la informatica en general.</p>
         <p>Actualmente estoy estudiando y trabajando en proyectos personales para mejorar mis habilidades y conocimientos en el área de la programación y el desarrollo de software.</p>
     </section>
-
-    <section id="proyects"> <!-- agregar despues cuadros con codigos de repositorios de github-->
-        <h2>Proyectos</h2>
+    
+    <section class="section1" id="proyects"> <!-- agregar despues cuadros con codigos de repositorios de github-->
+        <h2>PROYECTOS</h2>
         <p>Estos son algunos de mis proyectos personales y académicos.</p>
         <hr>
-        <p>Proyecto 1: <a href="https://github.com/FourSoda8545/GenPassword">Generador de contraseñas.</a></p>
-        <p>Proyecto 2: <a href="https://github.com/FourSoda8545/PortScanner">Escaner de puertos.</a></p>
-    </section>
+        <p>Proyecto 1: </p>
+        <div class="card">
+            <h3>GENERADOR DE CONTRASEÑAS</h3>
+            <img width="600" src="genPass1.jpg" alt="Project image">
+            <p>Este repositorio fue de mis primeros trabajos con python, con el puedes generar contraseñas seguras, con distintas especificaciones, así como descifrar contraseñas o desencriptarlas.</p>
+            <p>Puedes encontrar más información <a href="https://github.com/FourSoda8545/GenPassword">aquí</a>.</p>
+        </div>
 
-    <section id="services">
-        <h2>Servicios</h2>
+        <hr>
+
+        <p>Proyecto 2:</p>
+        <div class="card">
+            <h3>ESCANER DE PUERTOS</h3>
+            <img width="600" src="genPass.jpg" alt="Project image">
+            <p>Este proyecto fue de mis primeros trabajos con python, con el puedes escanear los puertos de una red local o remota, y obtener información de los servicios que se encuentran en cada uno de ellos.</p>
+            <p>Puedes encontrar más información <a href="https://github.com/FourSoda8545/PortScanner">aquí</a>.</p>
+        </div>
+    </section>
+    
+    <section class="section" id="services">
+        <h2>SERVICIOS</h2>
         <p>Ofrezco servicios de:</p>
         <ul>
             <li>Desarrollo de software.</li>
@@ -58,24 +88,42 @@
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contacto</h2>
+    <section class="section1" id="contact">
+        <h2>CONTACTO</h2>
         <p>Si deseas contactarme, puedes hacerlo a través de:</p>
-        <p>Correo electrónico: <a href="aldost939@gmail.com"> coreo </a></p>
-            <p>Telefono: 555-555-5555</p>
-            <a hreflang="https://www.instagram.com/digital.aldorojaz"></a>
-    </section>
+            <a href="aldost939@gmail.com">aldost939@gmail.com</a></p>
+            <a href="https://www.instagram.com/digital.aldorojaz" target="_blank" rel="noopener noreferrer"><i title="mi instagram" class="fa-brands fa-instagram fa-beat-fade fa-xl"></i></a><br>
+            <br>
+            <a href="https://www.facebook.com/aldorojazz" target="_blank" rel="noopener noreferrer"><i title="mi facebook" class="fa-brands fa-facebook fa-fade fa-xl"></i></a><br>
+            <br>
+            <a href="https://www.github.com/FourSoda8545" target="_blank" rel="noopener noreferrer"><i title="mi github" class="fa-brands fa-github fa-beat-fade fa-xl"></i></a><br>
+        </section>
+    
 
+    <!--ACCESORIOS DE LA PAGINA-->
+    
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=522291296762&text=Quiero%20más%20información%20sobre%20tu%20portafolio." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    
+    
+    <!-- Botón de volver arriba -->
+    <button id="backToTop" class="back-to-top">⬆️</button>
+    
+    <!-- MOSTRAR EL CLIMA DE VERACRUZ, Mexico en la esquina superior del lado derecho de la pagina -->
+    <div id="weather" style="display: block;">Cargando clima...</div>
+    
     <footer>
-        <p>&copy; 2023 Aldo Rojas. Todos los derechos reservados.</p>
-        <ul>
-            <li><a href="https://www.instagram.com/digital.aldorojaz" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="https://www.facebook.com/aldorojaz" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="https://www.github.com/FourSoda8545" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
-        </ul>
+        <p>&copy; 2024 Aldo Rojas. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://kit.fontawesome.com/ddd9d9de5e.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnF5qI5WlrHm/kaKioKM06RCh8YCEfFVj8BIebIDQZg+2uBYEXvL//KA0Hm8k" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ddd9d9de5e.js" crossorigin="anonymous"></script> 
+    
+    <script src="https://kit.fontawesome.com/0d8b5f5f8.js" crossorigin="anonymous"></script>
 
 </body>
 

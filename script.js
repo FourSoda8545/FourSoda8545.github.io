@@ -85,12 +85,12 @@ backToTopButton.addEventListener('click', () => {
         .then(data => {
             console.log(data);
             // DATOS JSON
-            const feelsLike = data.main.feels_like;
-            const humidity = data.main.humidity;
-            const windSpeed = data.wind.speed;
             const temperature = data.main.temp;
+            const feelsLike = data.main.feels_like;
             const description = data.weather[0].description;
             const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+            const humidity = data.main.humidity;
+            const windSpeed = data.wind.speed;
     
             // SELECCIONA EL ELEMENTO DEL CLIMA
             const weatherElement = document.getElementById('weather');

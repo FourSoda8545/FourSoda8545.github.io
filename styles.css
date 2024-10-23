@@ -6,7 +6,7 @@ header {
     font-family: Verdana, sans-serif;
     color: white;
     padding: 20px 0;
-    position: sticky;
+    position:-ms-page;
     top: auto;
     width: 100%;
     z-index:auto;
@@ -92,12 +92,328 @@ hr {
     margin: 40px 15q;
 }
 
-/* Estilos para pantallas */
 
+   /* Animación de aparición */
+    section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BOTÓN BACK TO TOP */
+.back-to-top {
+    display:flexbox;
+    position:fixed;
+    bottom: 80px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color:#333;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+#weather {
+    position:sticky;
+    top: 5px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ESTILOS RESPONSIVOS */
+
+/* DISPOSITIVOS PEQUIEÑOS COMO (TELEFONOS MOVILES (IPHONE SE, SAMSUNG A54-S20+)) */
+
+@media (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px auto;
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .back-to-top {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* DISPOSITIVOS MEDIANOS COMO IPAD MINI Y TABLETAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    /* MANEJO DE SECCIONES */
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    section {
+        padding: 20px 10px;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* SECCIONES */
+
+    .section1, .section2 {
+    background-size: cover;
+    background-position: center;
+        padding: 20px;
+        margin: 10px auto;
+        width: 95%;
+        max-width: 750px;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        } 
+    
+    #weather {
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        width: 90%;
+        max-width: 200px;
+        padding: 10px;
+        box-shadow: none;
+    }
+    
+    .back-to-top {
+        bottom: 60px;
+        left: 10px;
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* IMAGENES */
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        }
+}
+
+
+/* ESTILO PARA PANTALLAS DE 412px x 914px */
+
+@media (max-width: 414px) and (max-height: 914px) {
+
+    /* AJUSTES GENERALES */
+
+    body {
+        font-size: 16px; /* NO OLVIDAR REDUCIR EL TAMAÑO DE LA FUENTE */
+    }
+
+    /* ENCABEZADO */
+
+    header {
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* SECCIONES */
+
+    section {
+        padding: 15px 10px;
+        margin: 10px auto;
+        width: 95%;
+        max-width: 350px;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* CLIMA */
+    
+    #weather {
+        bottom: 15px;
+        right: 10px;
+        width: 85%;
+        max-width: 100px;
+    }
+    
+    /* BOTÓN BACK TO TOP */
+    
+    .back-to-top {
+        bottom: 50px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* TARJETAS */
+
+    .card {
+        padding: 12px;
+        border-radius: 10px;
+    }
+    
+    /* ENCABEZADO */
+    
+    header h1 {
+        font-size: 24px;
+    }
+
+    /* AJUSTE DE IMAGENES */
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* DISPOSITIVOS DE 425PX DE ANCHO Y 531PX DE ALTO */
+
+@media (max-width: 425px) and (max-height: 531px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 12px 0;
+    }
+    
+    section {
+        padding: 15px;
+        margin: 10px auto;
+        width: 95%;
+        max-width: 400px;
+        border-radius: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 8px 0;
+    }
+    
+    .back-to-top {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    h1, h2 {
+        font-size: 20px; /* AJUSTAR TITULOS PARA PANTALLAS PEQUEÑAS */
+    }
+
+    p {
+        font-size: 14px; /* EN PANTALLAS PEQUEÑAS, AJUSTAR TEXTO PARA LEGIBILIDAD */
+    }
+    
+    /*AJUSTE DE IMAGENES */
+    
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* ESTILO PARA PANTALLAS MÁS GRANDES */
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* ESTILO PARA PANTALLAS EXTRAGRANDES */
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+/* Boton(es) */
+
+/*
+
+butt1 {
+    background-color: #001aff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px 6px 9px 12px;
+    cursor: pointer;
+}
+butt1:hover {
+    background-color: #001aff;  
+    color: white;
+}
 .column {
     width: 100%;
 }
-/* ESTILO PARA PANTALLA DE CELULAR */
+
+
+/* ESTILO PARA PANTALLA DE CELULAR 
 @media (max-width: 768px) {
     .column {
         width: 100%;
@@ -144,77 +460,4 @@ hr {
     }
 }
 
-
-   /* Animación de aparición */
-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* BOTÓN BACK TO TOP */
-.back-to-top {
-    display:flexbox;
-    position:fixed;
-    bottom: 80px;
-    left: 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1000;
-}
-
-.back-to-top:hover {
-    background-color:#333;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-
-#weather {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-/* Boton(es) */
-
-/*
-
-butt1 {
-    background-color: #001aff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px 6px 9px 12px;
-    cursor: pointer;
-}
-butt1:hover {
-    background-color: #001aff;  
-    color: white;
-    }
 */

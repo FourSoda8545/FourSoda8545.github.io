@@ -57,7 +57,7 @@ body {
     background-color: var(--main-color);
     color: var(--text-color);
     margin: 0;
-    padding: 0;
+    padding: 0 auto;
     line-height: 1.8;
 }
 body::before {
@@ -66,6 +66,10 @@ body::before {
     animation: move 10s infinite linear;
     z-index: -1;
 }
+.bcontact {
+    padding: 50px;
+}
+
 
 /*
 .background-shape {
@@ -87,10 +91,13 @@ body::before {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
 }
+.section4 h2, /* Proyectos */
+.section4 h3 {
+    text-align: center;
+}
 
-.section3 {
+.section3 { /* Sobre mi */
     background: linear-gradient(to bottom, #333 10%, #0f0 400%);
-    color: #000;
 }
 .section3 h2 {
     font-family: var(--font_family);
@@ -103,17 +110,16 @@ body::before {
     color: var(--text-color);
     text-align: center;
 }
-.puntobat {
+.puntobat { /* yo */
     width: 80px;
     height: auto; 
     display: flex;
     align-items: right;
     margin: auto;
     justify-content: center;
-    border-radius: 5% 5%;
 }
 
-.section5 {
+.section5 { /* Contacto */
     background-color: var(--prim-color);
     text-align: center;
     border-radius: 10px;
@@ -133,7 +139,10 @@ body::before {
     transform: translateY(-5px);
 }
 
-
+.section6 h2 { /* Servicios */
+    text-align: center;
+}
+.section6 
 
 
 .projects-container {

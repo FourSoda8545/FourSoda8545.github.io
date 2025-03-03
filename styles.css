@@ -103,11 +103,31 @@ body::before {
     font-family: var(--font_family);
     font-size: 28px;
     text-align: center;
-    color: var(--sec-color);
+    color: var();
+}
+.puntobat {                          /* YO */
+    display:table;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    align-items: center;
+    margin: 20px auto;
+    
+    justify-content: center;
 }
 .section3 p {
     font-weight: bolder ;
-    color: var(--text-color);
+    color: var(--colTxt);
+    text-align:center;
+    
+}
+
+
+.section6 {
+    margin: 0 auto;
+    
+}
+.section6 h1 {                        /* SERVICIOS */
     text-align: center;
 }
 .puntobat { /* yo */
@@ -119,7 +139,8 @@ body::before {
     justify-content: center;
 }
 
-.section5 { /* Contacto */
+
+.section5 {                          /* CONTACTO */
     background-color: var(--prim-color);
     text-align: center;
     border-radius: 10px;
@@ -204,26 +225,24 @@ body::before {
 }
 
 
-/* Animación de secciones */
-section {
+section {                              /* Animación de secciones */
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.7s ease-out, transform 0.6s ease-out;
 }
-
 section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Separadores */
-hr {
+
+hr {                                    /* SEPARADORES */
     border: none;
     border-top: 1px solid var(--sec-color);
 }
 
-/* Botón Back to Top */
-.back-to-top {
+
+.back-to-top {                           /* BOTON INICIO */
     background-color: var(--prim-color);
     color: var(--sec-color);
     display: static;
@@ -233,17 +252,16 @@ hr {
     cursor: pointer;
     font-size: 18px;
 }
-
 .back-to-top:hover {
     background-color: var(--hover-color);
     color: #000;
 }
 
-footer {
+footer {                                /* PIE DE PÁGINA */
     text-align: center;
 }
 
-/* DISPOSITIVOS DE 425PX DE ANCHO Y 531PX DE ALTO */
+
 
 @media (max-width: 425px) and (max-height: 531px) {
     body {
@@ -292,11 +310,10 @@ footer {
         max-width: 400px;
         margin: 0 auto;
     }
-}
+}/* DISPOSITIVOS DE 425PX DE ANCHO Y 531PX DE ALTO */
 
-/* ESTILO PARA PANTALLAS MÁS GRANDES */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {     /* ESTILO PARA PANTALLAS MÁS GRANDES */
     body {
         font-size: 18px;
     }
@@ -304,14 +321,15 @@ footer {
 
 /* ESTILO PARA PANTALLAS EXTRAGRANDES */
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {    /* ESTILO PARA PANTALLAS EXTRAGRANDES */
     body {
         font-size: 20px;
         padding: 20px;
     }
 }
 
-/* DISPOSITIVOS MEDIANOS COMO IPAD MINI Y TABLETAS PEQUEÑAS */
+
+@media (max-width: 768px) {     /* DISPOSITIVOS MEDIANOS IPAD MINI Y TABLETAS PEQUEÑAS */
 
 @media (max-width: 768px) {
     header {
@@ -368,9 +386,7 @@ footer {
         }
 }
 
-/* DISPOSITIVOS PEQUEÑOS (TELEFONOS MOVILES (IPHONE SE, SAMSUNG A54-S20+)) */
-
-@media (max-width: 375px) {
+@media (max-width: 375px) {     /* DISPOSITIVOS PEQUEÑOS IPHONE SE, SAMSUNG A54-S20+) */
     body {
         font-size: 14px;
     }
@@ -402,10 +418,9 @@ footer {
 }
 
 
-/* Comentarios */
+/* Comentarios 
+*/
 
-
-/* Boton(es) */
 
 /*
 
